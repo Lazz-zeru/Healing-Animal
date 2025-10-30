@@ -32,8 +32,8 @@ function DashBoardLayout() {
             <NavigationBar />
             <Header />
             <WhoWeAre />
-            <Carts />
             <OurValues />
+            <Carts />
 
             <Filter onSelect={setSelectedFilter} />
 

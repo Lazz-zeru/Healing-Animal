@@ -20,7 +20,7 @@ function Tarjeta() {
 
   return (
     <div className="ma-tarjeta-container">
-      <button className="ma-arrow-button-tarjeta" onClick={handlePrev}>
+      <button className="ma-arrow-button-tarjeta ma-left" onClick={handlePrev}>
         <img src={left} alt="Anterior"/>
       </button>
 
@@ -28,7 +28,7 @@ function Tarjeta() {
         <img src={images[currentIndex]} alt={`tarjeta ${currentIndex + 1}`} />
       </div>
 
-      <button className="ma-arrow-button-tarjeta" onClick={handleNext}>
+      <button className="ma-arrow-button-tarjeta ma-right" onClick={handleNext}>
         <img src={right} alt="Siguiente"/>
       </button>
     </div>

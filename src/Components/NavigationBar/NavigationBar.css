@@ -1,23 +1,29 @@
+.ma-nav-bar-container {
+    width: 100%;
+    border-bottom: 3px solid rgba(156, 156, 156, 0.342);
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+}
+
 .ma-nav {
     display: grid;
     grid-template-columns: 30dvw repeat(4, auto);
     grid-template-rows: 10dvh;
     column-gap: 15px;
     align-items: center;
-    padding: 0 15%;
-    width: 100dvw;
-    position: fixed;
-    top: 0;
-    border-bottom: 3px solid rgba(156, 156, 156, 0.342);
-    background-color: #fff;
+    justify-items: center;
+    padding: 0 20px;
+    margin: auto;
+    max-width: 1200px;
     text-align: center;
-
     z-index: 100;
 }
 
 .ma-nav-logo {
     display: grid;
     grid-template-columns: auto 1fr;
+    justify-self: left;
     column-gap: 15px;
     align-items: center;
 }
@@ -25,7 +31,7 @@
 .ma-links p {
     width: fit-content;
     font-weight: 500;
-    font-size: 13.6px;
+    font-size: clamp(13.6px, 2vw, 20px);
     line-height: 24px;
     letter-spacing: 0%;
     vertical-align: middle;
@@ -40,7 +46,7 @@
     transition: 0.70s all;
 }
 
-.ma-links a{
+.ma-links a {
     color: var(--color-tittle);
     font-size: 16px;
     text-decoration: none;
@@ -48,7 +54,7 @@
 
 .ma-nav-logo p {
     font-weight: 700;
-    font-size: 17px;
+    font-size: clamp(17px, 2vw, 30px);
     line-height: 28px;
     letter-spacing: 0%;
     vertical-align: middle;
@@ -57,17 +63,70 @@
 }
 
 .ma-button-sell {
-    width: 143px;
+    width: fit-content;
+    padding: 5px 20px;
     height: 37px;
     background-color: var(--color-buttons);
     border: none;
     border-radius: 15px;
     font-weight: 500;
     font-style: Medium;
-    font-size: 13.6px;
+    font-size: clamp(13.6px, 2vw, 20px);
     line-height: 24px;
     letter-spacing: 0%;
     vertical-align: middle;
     color: #fff;
     cursor: pointer;
+}
+
+.ma-icon-links {
+    display: none;
+    justify-self: flex-end;
+}
+
+.ma-links-mobile {
+    background-color: #fff;
+    width: 200px;
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    border: 2px solid rgba(128, 128, 128, 0.227);
+    border-radius: 15px;
+}
+
+.ma-links-mobile li {
+    padding: 20px 0;
+    list-style: none;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.227);
+    cursor: pointer;
+}
+
+.ma-links-mobile li:last-child {
+    background-color: #F59E0B;
+    border-radius: 0 0 15px 15px;
+    color: #fff;
+}
+
+.ma-links-mobile li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.ma-links-mobile li:last-child a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .ma-nav {
+        grid-template-columns: 30dvw auto;
+    }
+
+    .ma-hidden-link {
+        display: none;
+    }
+
+    .ma-icon-links {
+        display: grid;
+    }
 }

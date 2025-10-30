@@ -1,8 +1,13 @@
 .ma-folleto-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 600px auto;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
 }
 
 .ma-arrow-button {
@@ -20,8 +25,34 @@
 }
 
 .ma-image-container img {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 800px) {
+  .ma-folleto-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'img img '
+      'left right'
+    ;
+  }
+
+  .ma-image-container {
+    grid-area: img;
+    justify-self: center;
+    grid-column: span 2;
+  }
+
+  .ma-left {
+    grid-area: right;
+  }
+
+  .ma-left {
+    grid-area: left;
+  }
 }

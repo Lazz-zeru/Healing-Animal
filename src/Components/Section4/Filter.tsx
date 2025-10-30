@@ -48,8 +48,8 @@ function Filter({ onSelect }: FilterProps) {
       <div className="ma-text-section4">
         <img src={viga} height={'10px'} alt="Decoración" />
         <h1>Nuestros Productos</h1>
-        <p>Descubre nuestra línea de productos naturales elaborados con miel de la más alta calidad,</p>
-        <p>diseñados específicamente para mejorar la salud y bienestar de tus animales.</p>
+        <p>Descubre nuestra línea de productos naturales elaborados con miel de la más alta calidad, 
+          diseñados específicamente para mejorar la salud y bienestar de tus animales.</p>
       </div>
 
       <form className='ma-filter-section4'>

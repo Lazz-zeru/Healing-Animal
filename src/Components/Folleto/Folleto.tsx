@@ -20,7 +20,7 @@ function Folleto() {
 
   return (
     <div className="ma-folleto-container">
-      <button className="ma-arrow-button" onClick={handlePrev}>
+      <button className="ma-arrow-button ma-left" onClick={handlePrev}>
         <img src={left} alt="Anterior"/>
       </button>
 
@@ -28,7 +28,7 @@ function Folleto() {
         <img src={images[currentIndex]} alt={`Folleto ${currentIndex + 1}`} />
       </div>
 
-      <button className="ma-arrow-button" onClick={handleNext}>
+      <button className="ma-arrow-button ma-right" onClick={handleNext}>
         <img src={right} alt="Siguiente"/>
       </button>
     </div>
